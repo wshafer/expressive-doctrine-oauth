@@ -27,7 +27,7 @@
     },
     "autoload": {
         "psr-4": {
-            "WShafer\\OAuth": "src/"
+            "WShafer\\OAuth\\": "src/"
         }
     },
     "autoload-dev": {
