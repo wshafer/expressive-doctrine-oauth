@@ -18,7 +18,7 @@
         "php": "^7.1",
         "dasprid/container-interop-doctrine": "^1.1",
         "league/oauth2-server": "^7.0",
-        "zendframework/zend-expressive": "^3.0.0",
+        "zendframework/zend-expressive": "^3.0.0"
     },
     "require-dev": {
         "phpunit/phpunit": "^7.0.1",

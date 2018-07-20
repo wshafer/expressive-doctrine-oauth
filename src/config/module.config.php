@@ -35,56 +35,56 @@ return [
             'refresh_token'      => \League\OAuth2\Server\Grant\RefreshTokenGrant::class,
         ],
         'factories' => [
-            \OAuth\Middleware\OAuth2::class
-                => \OAuth\Middleware\OAuth2Factory::class,
-            \OAuth\Middleware\Authentication::class
-                => \OAuth\Middleware\AuthenticationFactory::class,
-            \OAuth\EventListener\OAuthEventSubscriber::class
-                => \OAuth\EventListener\OAuthEventSubscriberFactory::class,
+            \WShafer\OAuth\Middleware\OAuth2::class
+                => \WShafer\OAuth\Middleware\OAuth2Factory::class,
+            \WShafer\OAuth\Middleware\Authentication::class
+                => \WShafer\OAuth\Middleware\AuthenticationFactory::class,
+            \WShafer\OAuth\EventListener\OAuthEventSubscriber::class
+                => \WShafer\OAuth\EventListener\OAuthEventSubscriberFactory::class,
 
 
-            \OAuth\Config\Config::class
-                => \OAuth\Config\ConfigFactory::class,
+            \WShafer\OAuth\Config\Config::class
+                => \WShafer\OAuth\Config\ConfigFactory::class,
             \League\OAuth2\Server\AuthorizationServer::class
-                => \OAuth\AuthorizationServerFactory::class,
+                => \WShafer\OAuth\AuthorizationServerFactory::class,
             \League\OAuth2\Server\ResourceServer::class
-                => \OAuth\ResourceServerFactory::class,
+                => \WShafer\OAuth\ResourceServerFactory::class,
             \League\OAuth2\Server\AuthorizationValidators\BearerTokenValidator::class
-                => \OAuth\AuthorizationValidators\BearerTokenValidatorFactory::class,
+                => \WShafer\OAuth\AuthorizationValidators\BearerTokenValidatorFactory::class,
 
             /* Commands */
-            \OAuth\Command\KeyGenerator::class
-                => \OAuth\Command\KeyGeneratorFactory::class,
+            \WShafer\OAuth\Command\KeyGenerator::class
+                => \WShafer\OAuth\Command\KeyGeneratorFactory::class,
 
-            \OAuth\Command\Scope\Create::class
-                => \OAuth\Command\Scope\CreateFactory::class,
-            \OAuth\Command\Scope\Delete::class
-                => \OAuth\Command\Scope\DeleteFactory::class,
+            \WShafer\OAuth\Command\Scope\Create::class
+                => \WShafer\OAuth\Command\Scope\CreateFactory::class,
+            \WShafer\OAuth\Command\Scope\Delete::class
+                => \WShafer\OAuth\Command\Scope\DeleteFactory::class,
 
-            \OAuth\Command\Client\Create::class
-                => \OAuth\Command\Client\CreateFactory::class,
-            \OAuth\Command\Client\Modify::class
-                => \OAuth\Command\Client\ModifyFactory::class,
-            \OAuth\Command\Client\Grants::class
-                => \OAuth\Command\Client\GrantsFactory::class,
-            \OAuth\Command\Client\Scopes::class
-                => \OAuth\Command\Client\ScopesFactory::class,
-            \OAuth\Command\Client\Secret::class
-                => \OAuth\Command\Client\SecretFactory::class,
-            \OAuth\Command\Client\Delete::class
-                => \OAuth\Command\Client\DeleteFactory::class,
+            \WShafer\OAuth\Command\Client\Create::class
+                => \WShafer\OAuth\Command\Client\CreateFactory::class,
+            \WShafer\OAuth\Command\Client\Modify::class
+                => \WShafer\OAuth\Command\Client\ModifyFactory::class,
+            \WShafer\OAuth\Command\Client\Grants::class
+                => \WShafer\OAuth\Command\Client\GrantsFactory::class,
+            \WShafer\OAuth\Command\Client\Scopes::class
+                => \WShafer\OAuth\Command\Client\ScopesFactory::class,
+            \WShafer\OAuth\Command\Client\Secret::class
+                => \WShafer\OAuth\Command\Client\SecretFactory::class,
+            \WShafer\OAuth\Command\Client\Delete::class
+                => \WShafer\OAuth\Command\Client\DeleteFactory::class,
 
             /* Grants */
             \League\OAuth2\Server\Grant\AuthCodeGrant::class
-                => \OAuth\Grant\AuthorizationCodeGrantFactory::class,
+                => \WShafer\OAuth\Grant\AuthorizationCodeGrantFactory::class,
             \League\OAuth2\Server\Grant\ClientCredentialsGrant::class
-                => \OAuth\Grant\ClientCredentialsGrantFactory::class,
+                => \WShafer\OAuth\Grant\ClientCredentialsGrantFactory::class,
             \League\OAuth2\Server\Grant\ImplicitGrant::class
-                => \OAuth\Grant\ImplicitGrantFactory::class,
+                => \WShafer\OAuth\Grant\ImplicitGrantFactory::class,
             \League\OAuth2\Server\Grant\PasswordGrant::class
-                => \OAuth\Grant\PasswordGrantFactory::class,
+                => \WShafer\OAuth\Grant\PasswordGrantFactory::class,
             \League\OAuth2\Server\Grant\RefreshTokenGrant::class
-                => \OAuth\Grant\RefreshTokenGrantFactory::class,
+                => \WShafer\OAuth\Grant\RefreshTokenGrantFactory::class,
         ],
     ],
 
@@ -98,8 +98,8 @@ return [
         'event_manager' => [
             'orm_default' => [
                 'subscribers' => [
-                    \OAuth\EventListener\OAuthEventSubscriber::class
-                        => \OAuth\EventListener\OAuthEventSubscriber::class,
+                    \WShafer\OAuth\EventListener\OAuthEventSubscriber::class
+                        => \WShafer\OAuth\EventListener\OAuthEventSubscriber::class,
                 ],
             ],
         ],
@@ -107,17 +107,15 @@ return [
 
     'console' => [
         'commands' => [
-            \OAuth\Command\KeyGenerator::class => \OAuth\Command\KeyGenerator::class,
-
-            \OAuth\Command\Scope\Create::class => \OAuth\Command\Scope\Create::class,
-            \OAuth\Command\Scope\Delete::class => \OAuth\Command\Scope\Delete::class,
-
-            \OAuth\Command\Client\Create::class => \OAuth\Command\Client\Create::class,
-            \OAuth\Command\Client\Modify::class => \OAuth\Command\Client\Modify::class,
-            \OAuth\Command\Client\Grants::class => \OAuth\Command\Client\Grants::class,
-            \OAuth\Command\Client\Scopes::class => \OAuth\Command\Client\Scopes::class,
-            \OAuth\Command\Client\Secret::class => \OAuth\Command\Client\Secret::class,
-            \OAuth\Command\Client\Delete::class => \OAuth\Command\Client\Delete::class,
+            \WShafer\OAuth\Command\KeyGenerator::class => \WShafer\OAuth\Command\KeyGenerator::class,
+            \WShafer\OAuth\Command\Scope\Create::class => \WShafer\OAuth\Command\Scope\Create::class,
+            \WShafer\OAuth\Command\Scope\Delete::class => \WShafer\OAuth\Command\Scope\Delete::class,
+            \WShafer\OAuth\Command\Client\Create::class => \WShafer\OAuth\Command\Client\Create::class,
+            \WShafer\OAuth\Command\Client\Modify::class => \WShafer\OAuth\Command\Client\Modify::class,
+            \WShafer\OAuth\Command\Client\Grants::class => \WShafer\OAuth\Command\Client\Grants::class,
+            \WShafer\OAuth\Command\Client\Scopes::class => \WShafer\OAuth\Command\Client\Scopes::class,
+            \WShafer\OAuth\Command\Client\Secret::class => \WShafer\OAuth\Command\Client\Secret::class,
+            \WShafer\OAuth\Command\Client\Delete::class => \WShafer\OAuth\Command\Client\Delete::class,
         ],
     ],
 ];
