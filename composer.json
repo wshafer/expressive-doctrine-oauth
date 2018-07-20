@@ -1,0 +1,43 @@
+{
+    "name": "wshafer/expressive-doctrine-oauth",
+    "description": "Zend Expressive adaptation of the Leagues Oauth Server using a Doctrine Backend",
+    "type": "project",
+    "homepage": "https://github.com/wshafer/expressive-doctorine-oauth",
+    "license": "MIT",
+    "keywords": [
+        "Oauth",
+        "Doctrine",
+        "zend-expressive"
+    ],
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "alpha",
+    "prefer-stable": true,
+    "require": {
+        "php": "^7.1",
+        "dasprid/container-interop-doctrine": "^1.1",
+        "league/oauth2-server": "^7.0",
+        "zendframework/zend-expressive": "^3.0.0",
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^7.0.1",
+        "squizlabs/php_codesniffer": "^2.9.1",
+        "phpmd/phpmd" : "@stable"
+    },
+    "autoload": {
+        "psr-4": {
+            "WShafer\\OAuth": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "WShafer\\OAuth\\Test\\": "tests/"
+        }
+    },
+    "extra": {
+        "zf": {
+            "config-provider": "WShafer\\OAuth\\ConfigProvider"
+        }
+    }
+}
